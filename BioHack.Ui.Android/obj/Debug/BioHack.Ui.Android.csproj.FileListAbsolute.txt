@@ -1,0 +1,17 @@
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Ui.Android.dll
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Ui.Android.pdb
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Ui.Android.dll.mdb
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Ui.Android.apk
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Ui.Android-Signed.apk
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\BioHack.Ui.Android.dll
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\BioHack.Ui.Android.pdb
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\android\bin\BioHack.Ui.Android.apk
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\res\layout\main.xml
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\res\values\strings.xml
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\res\drawable\icon.png
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\R.cs.flag
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\uploadflags.txt
+C:\src\biohack\BioHack.Ui.Android\obj\Debug\BioHack.Ui.Android.csprojResolveAssemblyReference.cache
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Core.Android.dll
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Core.Android.pdb
+C:\src\biohack\BioHack.Ui.Android\bin\Debug\BioHack.Core.Android.dll.mdb

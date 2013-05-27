@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/GetStartedButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:fitsSystemWindows="true" />
+    <TextView
+        android:text="Setup the variables you want to track"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/GettingStartedInfo"
+        android:visibility="visible"
+        android:layout_marginLeft="5dp" />
+    <Button
+        android:text="Add a Predictor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddPredictorButton" />
+    <TextView
+        android:text="Record an instance of a predictor variable"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddPredictorInfo"
+        android:layout_marginLeft="5dp"
+        android:visibility="visible" />
+    <Button
+        android:text="Add an Outcome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddOutcomeButton"
+        android:clickable="true" />
+    <TextView
+        android:text="Record an instance of an outcome measure"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddOutcomeInfo"
+        android:layout_marginLeft="5dp"
+        android:visibility="visible" />
+</LinearLayout>
