@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">BioHack.Ui.Andr</string>
+  <string name="datatype_prompt">Type of Data</string>
+  <string name="measuretype_prompt">Type of Measure</string>
+</resources>
+

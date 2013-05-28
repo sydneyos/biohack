@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="845BA240-D3C6-4DFB-AFE6-673A33849484" ModuleId="BioHack.Ui.Android" />
+  <Module PersistentId="D7AAA3D6-61C4-4354-B368-A5E034B066D9" ModuleId="BioHack.Core.Andr" />
+  <Module PersistentId="0D71F49B-6604-42FC-B51C-114476FFF0D3" ModuleId="BioHack.Andr" />
+  <Module PersistentId="6C5E0AEF-3953-4125-81A1-419595158356" ModuleId="BioHack.Core" />
+  <Module PersistentId="Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065" ModuleId="Mono.Android" />
+</Modules>

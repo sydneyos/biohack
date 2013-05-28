@@ -1,0 +1,14 @@
+R# version: 5.0.1659.36
+assembly Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065
+  file C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v2.3\Mono.Android.dll mtime 5/16/2013 11:56:44 PM
+  file C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v4.0.3\Mono.Android.dll mtime 5/16/2013 11:56:52 PM
+referenced assembly mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+  file C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\Silverlight\v3.0\mscorlib.dll mtime 8/18/2009 5:34:48 AM
+  file C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\mscorlib.dll mtime 5/16/2013 11:57:08 PM
+referenced assembly System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+  file C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Core.dll mtime 5/16/2013 11:57:08 PM
+no resolved referenced assembly Mono.Security, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756
+referenced assembly System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+  file C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.dll mtime 5/16/2013 11:57:08 PM
+referenced assembly System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
+  file C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\System.Xml.dll mtime 5/16/2013 11:57:08 PM

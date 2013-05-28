@@ -1,0 +1,3 @@
+BioHack.Ui.Andr.AddMeasureActivity;biohack.ui.andr.AddMeasureActivity
+BioHack.Ui.Andr.CustomEnumAdapter;biohack.ui.andr.CustomEnumAdapter
+BioHack.Ui.Andr.ActionPickerActivity;biohack.ui.andr.ActionPickerActivity

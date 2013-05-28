@@ -1,0 +1,52 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:ActionPickerActivity.cs" caret="1574" fromTop="24" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/d:values/f:Strings.xml" caret="675" fromTop="17" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Properties/f:AssemblyInfo.cs" caret="24" fromTop="0" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:AddMeasureActivity.cs" caret="1033" fromTop="26" />
+      <File id="D7AAA3D6-61C4-4354-B368-A5E034B066D9/d:Contracts/f:BusinessEntityBase.cs/l:..?..?BioHack.Core?Contracts?BusinessEntityBase.cs" caret="0" fromTop="0" />
+      <File id="D7AAA3D6-61C4-4354-B368-A5E034B066D9/d:Repositories/f:MeasureRepository.cs" caret="150" fromTop="5" />
+      <File id="D7AAA3D6-61C4-4354-B368-A5E034B066D9/d:Services/f:MeasureService.cs" caret="146" fromTop="4" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/f:Resource.designer.cs" caret="812" fromTop="21" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:ActionPickerActivity.cs" caret="585" fromTop="18" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:ActionPickerActivity.cs" caret="1001" fromTop="16" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:ActionPickerActivity.cs" caret="1532" fromTop="24" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/d:values/f:Strings.xml" caret="673" fromTop="4" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/d:values/f:Strings.xml" caret="657" fromTop="16" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/d:values/f:Strings.xml" caret="532" fromTop="11" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/d:values/f:Strings.xml" caret="246" fromTop="4" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:AddMeasureActivity.cs" caret="1216" fromTop="32" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:AddMeasureActivity.cs" caret="922" fromTop="26" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:AddMeasureActivity.cs" caret="404" fromTop="14" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:AddMeasureActivity.cs" caret="0" fromTop="0" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:AddMeasureActivity.cs" caret="74" fromTop="3" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/f:Resource.designer.cs" caret="1316" fromTop="13" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Properties/f:AssemblyInfo.cs" caret="24" fromTop="0" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/f:AddMeasureActivity.cs" caret="699" fromTop="18" />
+      <File id="D7AAA3D6-61C4-4354-B368-A5E034B066D9/d:Repositories/f:MeasureRepository.cs" caret="5384" fromTop="172" />
+      <File id="D7AAA3D6-61C4-4354-B368-A5E034B066D9/d:Services/f:MeasureService.cs" caret="143" fromTop="4" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/f:Resource.designer.cs" caret="0" fromTop="0" />
+      <File id="845BA240-D3C6-4DFB-AFE6-673A33849484/d:Resources/f:Resource.designer.cs" caret="584" fromTop="13" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.6.2\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

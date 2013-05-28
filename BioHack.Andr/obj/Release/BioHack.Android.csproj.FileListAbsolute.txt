@@ -1,0 +1,8 @@
+C:\src\biohack\BioHack.Android\bin\Release\BioHack.Android.dll
+C:\src\biohack\BioHack.Android\bin\Release\BioHack.Android.apk
+C:\src\biohack\BioHack.Android\bin\Release\BioHack.Android-Signed.apk
+C:\src\biohack\BioHack.Android\obj\Release\BioHack.Android.dll
+C:\src\biohack\BioHack.Android\obj\Release\android\bin\BioHack.Android.apk
+C:\src\biohack\BioHack.Android\obj\Release\res\values\strings.xml
+C:\src\biohack\BioHack.Android\obj\Release\R.cs.flag
+C:\src\biohack\BioHack.Android\obj\Release\uploadflags.txt

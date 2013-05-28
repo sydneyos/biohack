@@ -8,3 +8,7 @@ C:\src\biohack\BioHack\obj\x86\Debug\BioHack.pdb
 C:\src\biohack\BioHack\obj\x86\Debug\android\bin\BioHack.BioHack.apk
 C:\src\biohack\BioHack\obj\x86\Debug\R.cs.flag
 C:\src\biohack\BioHack\obj\x86\Debug\uploadflags.txt
+C:\src\biohack\BioHack.Core\bin\Debug\BioHack.Core.dll
+C:\src\biohack\BioHack.Core\bin\Debug\BioHack.Core.pdb
+C:\src\biohack\BioHack.Core\obj\x86\Debug\BioHack.Core.dll
+C:\src\biohack\BioHack.Core\obj\x86\Debug\BioHack.Core.pdb

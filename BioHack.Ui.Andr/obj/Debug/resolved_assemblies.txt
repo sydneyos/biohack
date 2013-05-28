@@ -1,0 +1,2 @@
+C:\src\biohack\BioHack.Ui.Andr\bin\Debug\BioHack.Ui.Andr.dll
+C:\src\biohack\BioHack.Ui.Andr\bin\Debug\BioHack.Core.Andr.dll

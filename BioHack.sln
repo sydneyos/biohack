@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioHack.Core", "BioHack.Core\BioHack.Core.csproj", "{6C5E0AEF-3953-4125-81A1-419595158356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioHack.Android", "BioHack.Android\BioHack.Android.csproj", "{0D71F49B-6604-42FC-B51C-114476FFF0D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioHack.Android", "BioHack.Andr\BioHack.Andr.csproj", "{0D71F49B-6604-42FC-B51C-114476FFF0D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioHack.Core.Android", "BioHack.Core.Android\BioHack.Core.Android.csproj", "{D7AAA3D6-61C4-4354-B368-A5E034B066D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioHack.Core.Andr", "BioHack.Core.Andr\BioHack.Core.Andr.csproj", "{D7AAA3D6-61C4-4354-B368-A5E034B066D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioHack.Ui.Android", "BioHack.Ui.Android\BioHack.Ui.Android.csproj", "{845BA240-D3C6-4DFB-AFE6-673A33849484}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BioHack.Ui.Andr", "BioHack.Ui.Andr\BioHack.Ui.Andr.csproj", "{845BA240-D3C6-4DFB-AFE6-673A33849484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,22 +15,26 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Debug|x86.Build.0 = Debug|Any CPU
-		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Release|x86.ActiveCfg = Release|Any CPU
-		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Release|x86.Build.0 = Release|Any CPU
 		{6C5E0AEF-3953-4125-81A1-419595158356}.Debug|x86.ActiveCfg = Debug|x86
 		{6C5E0AEF-3953-4125-81A1-419595158356}.Debug|x86.Build.0 = Debug|x86
 		{6C5E0AEF-3953-4125-81A1-419595158356}.Release|x86.ActiveCfg = Release|x86
 		{6C5E0AEF-3953-4125-81A1-419595158356}.Release|x86.Build.0 = Release|x86
-		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Debug|x86.Build.0 = Debug|Any CPU
-		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Release|x86.ActiveCfg = Release|Any CPU
-		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Release|x86.Build.0 = Release|Any CPU
+		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Debug|x86.Build.0 = Debug|Any CPU
+		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{0D71F49B-6604-42FC-B51C-114476FFF0D3}.Release|x86.Build.0 = Release|Any CPU
 		{D7AAA3D6-61C4-4354-B368-A5E034B066D9}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{D7AAA3D6-61C4-4354-B368-A5E034B066D9}.Debug|x86.Build.0 = Debug|Any CPU
 		{D7AAA3D6-61C4-4354-B368-A5E034B066D9}.Release|x86.ActiveCfg = Release|Any CPU
 		{D7AAA3D6-61C4-4354-B368-A5E034B066D9}.Release|x86.Build.0 = Release|Any CPU
+		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Debug|x86.Build.0 = Debug|Any CPU
+		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Release|x86.ActiveCfg = Release|Any CPU
+		{845BA240-D3C6-4DFB-AFE6-673A33849484}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = BioHack.Core\BioHack.Core.csproj

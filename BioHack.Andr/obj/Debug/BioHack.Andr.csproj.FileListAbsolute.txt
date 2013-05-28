@@ -1,0 +1,11 @@
+C:\src\biohack\BioHack.Andr\bin\Debug\BioHack.Andr.dll
+C:\src\biohack\BioHack.Andr\bin\Debug\BioHack.Andr.pdb
+C:\src\biohack\BioHack.Andr\bin\Debug\BioHack.Andr.dll.mdb
+C:\src\biohack\BioHack.Andr\bin\Debug\BioHack.Andr.apk
+C:\src\biohack\BioHack.Andr\bin\Debug\BioHack.Andr-Signed.apk
+C:\src\biohack\BioHack.Andr\obj\Debug\BioHack.Andr.dll
+C:\src\biohack\BioHack.Andr\obj\Debug\BioHack.Andr.pdb
+C:\src\biohack\BioHack.Andr\obj\Debug\android\bin\BioHack.Andr.apk
+C:\src\biohack\BioHack.Andr\obj\Debug\res\values\strings.xml
+C:\src\biohack\BioHack.Andr\obj\Debug\R.cs.flag
+C:\src\biohack\BioHack.Andr\obj\Debug\uploadflags.txt

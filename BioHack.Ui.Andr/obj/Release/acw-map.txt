@@ -1,0 +1,2 @@
+BioHack.Ui.Android.ActionPickerActivity;biohack.ui.android.ActionPickerActivity
+BioHack.Ui.Android.AddMeasureActivity;biohack.ui.android.AddMeasureActivity

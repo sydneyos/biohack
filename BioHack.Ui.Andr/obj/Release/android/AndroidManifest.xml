@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="BioHack.Ui.Android">
+  <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="10" />
+  <application android:name="mono.android.app.Application">
+    <activity android:label="BioHack Actions" android:name="biohack.ui.android.ActionPickerActivity" />
+    <activity android:label="Add a Measure" android:name="biohack.ui.android.AddMeasureActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="BioHack.Ui.Android.mono.MonoRuntimeProvider.__mono_init__" />
+    <activity android:label="BioHack Actions" android:name="biohack.ui.android.TrialSplashScreen73e2b78d44a14244a754f588bca1300d" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>

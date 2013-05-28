@@ -1,17 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BioHack.Ui.Android\Resources\Resource.designer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BioHack.Core.Android\Repositories\MeasureRepository.cs">
     <Files>
-      <File FileName="BioHack.Core\Domain\Measure.cs" Line="23" Column="2" />
-      <File FileName="BioHack.Core\Domain\DataTypes.cs" Line="1" Column="1" />
-      <File FileName="BioHack.Core.Android\Repositories\MeasureRepository.cs" Line="1" Column="1" />
-      <File FileName="BioHack.Ui.Android\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="BioHack.Ui.Android\Resources\Resource.designer.cs" Line="38" Column="5" />
+      <File FileName="BioHack.Core\Domain\Measure.cs" Line="1" Column="1" />
+      <File FileName="BioHack.Core.Android\Repositories\MeasureRepository.cs" Line="90" Column="1" />
+      <File FileName="BioHack.Ui.Android\ActionPickerActivity.cs" Line="26" Column="32" />
+      <File FileName="c:\src\biohack\BioHack.Core.Android\Services\MeasureService.cs" Line="44" Column="1" />
+      <File FileName="BioHack.Core\Domain\MeasureTypes.cs" Line="1" Column="1" />
+      <File FileName="BioHack.Ui.Android\AddMeasureActivity.cs" Line="17" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.BioHack.Ui.Android MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+  <MonoDevelop.Ide.ItemProperties.BioHack.Ui.Android MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Release="emulator-5554" />
 </Properties>
