@@ -11,7 +11,7 @@ namespace BioHack.Core.Domain
 			MeasureType = type;
 		}
 
-		public int Id { get; set; }
+		public long Id { get; set; }
 		public DataTypes DataType { get; set; }
 		public string MeasureName { get; set; }
 		public MeasureTypes MeasureType { get; private set; }

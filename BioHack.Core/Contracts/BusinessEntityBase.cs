@@ -14,7 +14,7 @@ namespace BioHack.Core.Contracts {
 		/// Gets or sets the Database ID.
 		/// </summary>
 //		[PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+        public long Id { get; set; }
 	}
 }
 

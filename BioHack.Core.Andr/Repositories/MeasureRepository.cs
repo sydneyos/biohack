@@ -38,22 +38,7 @@ namespace BioHack.Core.Andr.Repositories {
 				cmd.CommandText = sql;
 				cmd.ExecuteNonQuery ();
 			}
-
-			/*
-			// Create a sample note to get the user started
-			sql = "INSERT INTO Measures (MeasureName, DataType, MeasureType, Created) VALUES (@MeasureName, @DataType, @MeasureType, @Created);";
-
-			using (var cmd = connection.CreateCommand ()) {
-				cmd.CommandText = sql;
-				cmd.Parameters.AddWithValue ("@MeasureName", "Sample Measure");
-				cmd.Parameters.AddWithValue ("@DataType", DataTypes.Continuous.Value);
-				cmd.Parameters.AddWithValue ("@MeasureType", (int)MeasureTypes.Predictor);
-				cmd.Parameters.AddWithValue ("@Created", DateTime.Now);
-
-				cmd.ExecuteNonQuery ();
-			}
-			*/
-
+            
 			connection.Close ();
 		}
 
@@ -93,15 +78,15 @@ namespace BioHack.Core.Andr.Repositories {
 			}
 		}
 
-		public static Predictor GetPredictor(int id) {
+		public static Predictor GetPredictor(long id) {
 			return GetMeasure(id) as Predictor;
 		}
 
-		public static Outcome GetOutcome(int id)  {
+		public static Outcome GetOutcome(long id)  {
 			return GetMeasure(id) as Outcome;
 		}
 
-		public static Measure GetMeasure (int id)
+		public static Measure GetMeasure (long id)
 		{
 			var sql = "SELECT * FROM Measures WHERE Id = id;";
 
@@ -128,7 +113,7 @@ namespace BioHack.Core.Andr.Repositories {
 			return new Outcome (DataTypes.GetFromName (reader.GetString(2)), reader.GetString (1)) { Id = reader.GetInt32 (0)};
 		}
 
-		public static void DeleteMeasure (int id)
+		public static void DeleteMeasure (long id)
 		{
 			var sql = string.Format ("DELETE FROM Measures WHERE Id = {0};", id);
 
@@ -142,7 +127,7 @@ namespace BioHack.Core.Andr.Repositories {
 			}
 		}
 
-		public static int SaveMeasure (Measure measure)
+		public static long SaveMeasure (Measure measure)
 		{
 			using (var conn = GetConnection ()) {
 				conn.Open ();
@@ -156,7 +141,7 @@ namespace BioHack.Core.Andr.Repositories {
 						cmd.Parameters.AddWithValue ("@MeasureType", measure.MeasureType.Id);
 						cmd.Parameters.AddWithValue ("@Created", DateTime.Now);
 
-						measure.Id = (int)cmd.ExecuteScalar ();
+						measure.Id = (long)cmd.ExecuteScalar();
 					} else {
 						// Do an update
 						cmd.CommandText = "UPDATE Measures SET MeasureName = @MeasureName, DataType = @DataType, MeasureType = @MeasureType WHERE Id = @Id";

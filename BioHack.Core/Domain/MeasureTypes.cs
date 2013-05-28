@@ -10,14 +10,14 @@ namespace BioHack.Core.Domain
             Outcome = new MeasureTypes { Id = 2, Value = "Outcome", Display = "Outcome (dependent variable)" };
         }
 
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Value { get; set; }
         public string Display { get; set; }
 
         public static MeasureTypes Predictor;
         public static MeasureTypes Outcome;
 
-        public static MeasureTypes GetFromId(int id)
+        public static MeasureTypes GetFromId(long id)
         {
             if (id == 1) return Predictor;
             return Outcome;

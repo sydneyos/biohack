@@ -12,7 +12,7 @@ namespace BioHack.Core.Domain
             Ordinal = new DataTypes { Id = 4, Value = "Ordinal", Display = "Ordinal (rating)" };
 		}
 
-		public int Id { get; set; }
+		public long Id { get; set; }
 		public string Value { get; set; }
         public string Display { get; set; }
 

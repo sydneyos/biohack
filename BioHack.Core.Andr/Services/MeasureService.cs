@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using BioHack.Core.Andr.Repositories;
 using BioHack.Core.Domain;
@@ -10,16 +9,12 @@ namespace BioHack.Core.Andr.Services {
 	/// </summary>
 	public static class MeasureService {
 
-		static MeasureService ()
-		{
-		}
-
-		public static Predictor GetPredictor(int id)
+		public static Predictor GetPredictor(long id)
 		{
 			return MeasureRepository.GetPredictor(id);
 		}
 
-		public static Outcome GetOutcome(int id)
+		public static Outcome GetOutcome(long id)
 		{
 			return MeasureRepository.GetOutcome(id);
 		}
@@ -29,12 +24,12 @@ namespace BioHack.Core.Andr.Services {
 			return new List<Measure>(MeasureRepository.GetMeasures(type));
 		}
 		
-		public static int SaveMeasure (Measure item)
+		public static long SaveMeasure (Measure item)
 		{
 			return MeasureRepository.SaveMeasure(item);
 		}
 		
-		public static void DeleteMeasure(int id)
+		public static void DeleteMeasure(long id)
 		{
 			MeasureRepository.DeleteMeasure(id);
 		}
