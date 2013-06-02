@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Widget;
 using BioHack.Core.Andr.Services;
 using BioHack.Core.Domain;
+using BioHack.Core.Andr.Extensions;
 
 namespace BioHack.Ui.Andr
 {
@@ -21,7 +22,7 @@ namespace BioHack.Ui.Andr
             SetContentView(Resource.Layout.AddMeasure);// Create your application here
 
             _dataTypes = FindViewById<Spinner>(Resource.Id.DataType);
-            _dataTypes.ItemSelected += SpinnerItemSelected;
+            _dataTypes.ItemSelected += DataTypeSelected;
             _dataTypes.Adapter = new ArrayAdapter<DataTypes>(this.BaseContext, Android.Resource.Layout.SimpleSpinnerItem, DataTypes.Array);
 
             _measureTypes = FindViewById<Spinner>(Resource.Id.MeasureType);
@@ -33,10 +34,8 @@ namespace BioHack.Ui.Andr
 
         void Save(object sender, EventArgs e)
         {
-            string selectedMeasure = _measureTypes.SelectedItem.ToString();
-            string selectedDataType = _dataTypes.SelectedItem.ToString();
-            MeasureTypes type = MeasureTypes.GetFromDisplay(selectedMeasure);
-            DataTypes dataType = DataTypes.GetFromDisplay(selectedDataType);
+            DataTypes dataType = _measureTypes.SelectedItem.Cast<DataTypes>();
+            MeasureTypes type = _measureTypes.SelectedItem.Cast<MeasureTypes>();
             TextView measureName = FindViewById<TextView>(Resource.Id.MeasureName);
             Measure measure;
             if (type == MeasureTypes.Outcome)
@@ -51,11 +50,16 @@ namespace BioHack.Ui.Andr
             Finish();
         }
 
-	    private static void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+	    private static void DataTypeSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
 
             var value = spinner.GetItemAtPosition(e.Position);
+            DataTypes datatype = value.Cast<DataTypes>();
+
+            if (datatype != DataTypes.Continuous)
+            {
+            }
         }
 	}
 }

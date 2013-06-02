@@ -11,7 +11,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.BioHack.Ui.Andr" />
       </intent-filter>
     </receiver>
-    <activity android:label="BioHack Actions" android:name="biohack.ui.andr.TrialSplashScreen628311a49169435a9c2306da05a8f9ba" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+    <activity android:label="BioHack Actions" android:name="biohack.ui.andr.TrialSplashScreen7be4723d3a9a43e6a6c3c660caf87368" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

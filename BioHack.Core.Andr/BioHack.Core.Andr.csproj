@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\ICustomEnum.cs" />
+    <Compile Include="Extensions\JavaObjectExtensions.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="..\BioHack.Core\Contracts\BusinessEntityBase.cs">
       <Link>Contracts\BusinessEntityBase.cs</Link>
