@@ -1,0 +1,47 @@
+<div class="header">
+    <a href="#" class="button button-left back-button">
+        <button>Back</button>
+    </a>
+    <a href="#" class="button button-icon button-right search" id="view-home-refresh">
+        <button><img src="css/images/search-icon.png" alt="Refresh" width="16" height="16"></button>
+    </a>
+
+    <h1>measure</h1>
+</div>
+
+<div class="scroll striped" style="top:44px;">
+    <div class="measure-summary">
+        <header>
+            <h1><%= measureType %> <%= dataType %></h1>
+            <span class="link-text"><%= measureName %></span><br/>
+        </header>
+    </div>
+
+    <ul class="tableview tableview-links">
+        <li>
+            <div class="story">
+                <b>Measure Type</b><br/>
+                <select id="measureType">
+                    <option value="<%=MeasureTypes.CAUSE %>">Input</option>
+                    <option value="<%=MeasureTypes.EFFECT %>">Input</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div class="story">
+                <b>Data Type</b><br/>
+                <select id="dataType">
+                    <option value="<%=DataTypes.BOOL %>">Present/Absent</option>
+                    <option value="<%=DataTypes.INTEGER %>">Count</option>
+                    <option value="<%=DataTypes.ORDINAL %>">Ordinal</option>
+                    <option value="<%=DataTypes.DECIMAL %>">Decimal</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="button button-icon button-right search" id="view-home-refresh">
+                <button type='submit'><img src="css/images/back-button.png" alt="Refresh" width="16" height="16"></button>
+            </a>
+        </li>
+    </ul>
+</div>
