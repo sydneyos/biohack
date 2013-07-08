@@ -12,7 +12,7 @@
 <div class="scroll striped" style="top:44px;">
     <div class="measure-summary">
         <header>
-            <h1><%= measureType %> <%= dataType %></h1>
+            <h1><%= measureType.name %> <%= dataType.description %></h1>
             <span class="link-text"><%= measureName %></span><br/>
         </header>
     </div>
@@ -22,8 +22,8 @@
             <div class="story">
                 <b>Measure Type</b><br/>
                 <select id="measureType">
-                    <option value="<%=MeasureTypes.CAUSE %>">Input</option>
-                    <option value="<%=MeasureTypes.EFFECT %>">Input</option>
+                    <option value="<%=MeasureTypes.CAUSE.value %>"><%=MeasureTypes.CAUSE.name %></option>
+                    <option value="<%=MeasureTypes.EFFECT.value %>"><%=MeasureTypes.EFFECT.name %></option>                
                 </select>
             </div>
         </li>
@@ -31,10 +31,10 @@
             <div class="story">
                 <b>Data Type</b><br/>
                 <select id="dataType">
-                    <option value="<%=DataTypes.BOOL %>">Present/Absent</option>
-                    <option value="<%=DataTypes.INTEGER %>">Count</option>
-                    <option value="<%=DataTypes.ORDINAL %>">Ordinal</option>
-                    <option value="<%=DataTypes.DECIMAL %>">Decimal</option>
+                    <option value="<%=DataTypes.BOOLEAN.value %>"><%=DataTypes.BOOLEAN.description %></option>
+                    <option value="<%=DataTypes.INTEGER.value %>"><%=DataTypes.INTEGER.description %></option>
+                    <option value="<%=DataTypes.ORDINAL.value %>"><%=DataTypes.ORDINAL.description %></option>
+                    <option value="<%=DataTypes.DECIMAL.value %>"><%=DataTypes.DECIMAL.description %></option>
                 </select>
             </div>
         </li>

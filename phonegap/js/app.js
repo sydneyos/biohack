@@ -1,8 +1,18 @@
 "use strict";
 
 // Creating the application namespace
-var MeasureTypes = Object.freeze({ "CAUSE":1, "EFFECT":2});
-var DataTypes = Object.freeze({ "BOOL": 1, "INTEGER":2, "ORDINAL":3, "DECIMAL":4 });
+// Creating the application namespace
+var MeasureTypes = Object.freeze({
+    INPUT: { value: 1, name: 'Cause' },
+    OUTPUT: { value: 2, name: 'Effect' }
+    });
+var DataTypes = Object.freeze(
+    { 
+        BOOL:  { value: 1, name: 'Boolean', description: 'Present/Absent' },
+        INTEGER: { value: 2, name: 'Integer', description: 'Count' },
+        ORDINAL: { value: 3, name: 'Ordinal', description: 'Ordinal' },
+        DECIMAL: { value: 4, name: 'Decimal', description: 'Decimal' }
+    });
 var directory = {
     models: {},
     views: {},
@@ -43,15 +53,15 @@ directory.utils.store = {
     measures: {},
 
     populate: function() {
-        this.measures[1] = {id: 1, measureType: 1, dataType: 3, measureName: 'Chocolate', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[2] = {id: 2, measureType: 1, dataType: 3, measureName: 'Citrus', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[3] = {id: 3, measureType: 1, dataType: 4, measureName: 'Calories', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[4] = {id: 4, measureType: 1, dataType: 2, measureName: 'Cups of Coffee', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[5] = {id: 5, measureType: 1, dataType: 4, measureName: 'Hours of Sleep', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[6] = {id: 6, measureType: 1, dataType: 2, measureName: 'Carb grams', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[7] = {id: 7, measureType: 2, dataType: 3, measureName: 'Headache', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[8] = {id: 8, measureType: 2, dataType: 4, measureName: 'Weight', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[9] = {id: 9, measureType: 2, dataType: 3, measureName: 'Fatigue', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[1] = {id: 1, measureType: MeasureTypes.INPUT, dataType: DataTypes.ORDINAL, measureName: 'Chocolate', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[2] = {id: 2, measureType: MeasureTypes.INPUT, dataType: DataTypes.ORDINAL, measureName: 'Citrus', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[3] = {id: 3, measureType: MeasureTypes.INPUT, dataType: DataTypes.DECIMAL, measureName: 'Calories', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[4] = {id: 4, measureType: MeasureTypes.INPUT, dataType: DataTypes.INTEGER, measureName: 'Cups of Coffee', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[5] = {id: 5, measureType: MeasureTypes.INPUT, dataType: DataTypes.DECIMAL, measureName: 'Hours of Sleep', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[6] = {id: 6, measureType: MeasureTypes.INPUT, dataType: DataTypes.INTEGER, measureName: 'Carb grams', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[7] = {id: 7, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.ORDINAL, measureName: 'Headache', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[8] = {id: 8, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.DECIMAL, measureName: 'Weight', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[9] = {id: 9, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.ORDINAL, measureName: 'Fatigue', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
     },
 
     findById: function(id) {
