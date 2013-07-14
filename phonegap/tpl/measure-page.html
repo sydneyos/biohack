@@ -17,31 +17,42 @@
         </header>
     </div>
 
-    <ul class="tableview tableview-links">
-        <li>
-            <div class="story">
-                <b>Measure Type</b><br/>
-                <select id="measureType">
-                    <option value="<%=MeasureTypes.CAUSE.value %>"><%=MeasureTypes.CAUSE.name %></option>
-                    <option value="<%=MeasureTypes.EFFECT.value %>"><%=MeasureTypes.EFFECT.name %></option>                
-                </select>
-            </div>
-        </li>
-        <li>
-            <div class="story">
-                <b>Data Type</b><br/>
-                <select id="dataType">
-                    <option value="<%=DataTypes.BOOLEAN.value %>"><%=DataTypes.BOOLEAN.description %></option>
-                    <option value="<%=DataTypes.INTEGER.value %>"><%=DataTypes.INTEGER.description %></option>
-                    <option value="<%=DataTypes.ORDINAL.value %>"><%=DataTypes.ORDINAL.description %></option>
-                    <option value="<%=DataTypes.DECIMAL.value %>"><%=DataTypes.DECIMAL.description %></option>
-                </select>
-            </div>
-        </li>
-        <li>
+    <div class="measure-details" >
+        <div class="detail-section"><b>Measure Type</b></div>
+        <ul class="tableview tableview-links">
+            <li>
+                <a href="#" data=val="<%=MeasureTypes.INPUT.value %>"><%=MeasureTypes.INPUT.name %></a>
+            </li>
+            <li>
+                <a href="#" data=val="<%=MeasureTypes.OUTPUT.value %>"><%=MeasureTypes.OUTPUT.name %></a> 
+            </li>
+        </ul>
+        
+        <div class="detail-section"><b>Data Type</b></div>
+        <ul class="tableview tableview-links">
+            <li>
+                <a value="<%=DataTypes.BOOL.value %>"><%=DataTypes.BOOL.description %></a>
+            </li>
+            <li>
+                <a value="<%=DataTypes.INTEGER.value %>"><%=DataTypes.INTEGER.description %></a>
+            </li>
+            <li>
+                <a value="<%=DataTypes.DECIMAL.value %>"><%=DataTypes.DECIMAL.description %></a>
+            </li>
+            <li>
+                <a value="<%=DataTypes.ORDINAL.value %>"><%=DataTypes.ORDINAL.description %></a>
+                <a href="#ordinalValues/<%= id %>" class="detail-disclosure"><span></span></a>
+            </li>
+            <li>
+                <a value="<%=DataTypes.DISCRETE.value %>"><%=DataTypes.DISCRETE.description %></a>
+                <a href="#discreteValues/<%= id %>" class="detail-disclosure"><span></span></a>
+            </li>
+        </ul>
+
+        <div style="position:relative">
             <a href="#" class="button button-icon button-right search" id="view-home-refresh">
                 <button type='submit'><img src="css/images/back-button.png" alt="Refresh" width="16" height="16"></button>
             </a>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>

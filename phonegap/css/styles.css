@@ -105,6 +105,42 @@ body{
 	right: 0;
 }
 
+.button-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.button-list li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.button-list li a {
+	display: block;
+	padding: 0.5em;
+	position:relative;
+}
+
+.button-list-container:after {
+	content: ".";
+	display: block;
+	line-height: 1px;
+	font-size: 1px;
+	clear: both;
+}
+
+.button-menu {
+	padding: 7px 10px;
+}
+
+.button-menu button {
+	width: 100px;
+}
+
+
 .header h1{
 	padding: 0;
 	text-align: center;
@@ -269,7 +305,7 @@ body{
 	-o-background-size: 58px 31px;
 	background-size: 58px 31px;
 }
-.tableview-links li>a.detail-disclosure.tappable-active span{
+.tableview-links li>a.detail-disclosure.tappable-active span {
 	background-position: top right;
 }
 
@@ -277,6 +313,7 @@ body{
 	color: #385487;
 	font-weight: bold;
 }
+
 .inline-block{
 	display: inline-block;
 }
@@ -364,12 +401,20 @@ body{
 	background-repeat: repeat-x;
 	background-position: bottom;
 
-    height: 120px;
+    height: 50px;
 }
 
 .measure-summary img {
 	float: left;
 	margin-right: 12px;
+}
+
+.detail-section {
+	padding: 15px 0px 10px;
+}
+
+.measure-details {
+	margin:10px;
 }
 
 .action-item {

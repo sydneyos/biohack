@@ -3,15 +3,16 @@
 // Creating the application namespace
 // Creating the application namespace
 var MeasureTypes = Object.freeze({
-    INPUT: { value: 1, name: 'Cause' },
-    OUTPUT: { value: 2, name: 'Effect' }
+    INPUT: { value: 1, name: 'Cause', pluralName: 'Causes' },
+    OUTPUT: { value: 2, name: 'Effect', pluralName: 'Effects' }
     });
 var DataTypes = Object.freeze(
     { 
         BOOL:  { value: 1, name: 'Boolean', description: 'Present/Absent' },
         INTEGER: { value: 2, name: 'Integer', description: 'Count' },
+        DECIMAL: { value: 4, name: 'Decimal', description: 'Decimal' },
         ORDINAL: { value: 3, name: 'Ordinal', description: 'Ordinal' },
-        DECIMAL: { value: 4, name: 'Decimal', description: 'Decimal' }
+        DISCRETE: { value: 3, name: 'Discrete', description: 'Discrete/Coded' }
     });
 var directory = {
     models: {},
@@ -85,7 +86,7 @@ directory.utils.store = {
     findByType: function(measureType) {
         var results = [];
         for (var id in this.measures) {
-            if (this.measures[id].measureType === measureType) {
+            if (this.measures[id].measureType.value == measureType) {
                 results.push(this.measures[id]);
             }
         }
@@ -119,8 +120,8 @@ Backbone.sync = function(method, model, options) {
 // The measure Model
 directory.models.measure = Backbone.Model.extend({
     initialize: function() {
-        // this.reports = new directory.models.measureCollection();
-        // this.reports.managerId = this.id;
+        // this.options = new directory.models.measureCollection();
+        // this.options.managerId = this.id;
     }
 
 });
@@ -133,7 +134,11 @@ directory.models.measureCollection = Backbone.Collection.extend({
     store: directory.utils.store,
 
     findByName: function(key) {
-        this.reset(this.store.findByName(key));
+        this.reset(this.store.findByType(key));
+    },
+
+    findByType: function(key) {
+        this.reset(this.store.findByType(key));
     }
 
 });
@@ -149,18 +154,19 @@ directory.views.SearchPage = Backbone.View.extend({
 
     render: function(eventName) {
         $(this.el).html(this.template(this.model.toJSON()));
-        this.listView = new directory.views.measureListView({el: $('ul', this.el), model: this.model});
+        this.listView = new directory.views.measureListView({el: $('ul.results', this.el), model: this.model});
         this.listView.render();
         return this;
     },
 
     events: {
-        "keyup .search-key": "search"
+        "click": "search"
     },
 
     search: function(event) {
-        var key = $('.search-key').val();
-        this.model.findByName(key);
+        var key = $(event.srcElement).attr('data-val');
+        if (key===undefined) return;
+        this.model.findByType(key);
     }
 });
 
@@ -196,7 +202,6 @@ directory.views.measureListItemView = Backbone.View.extend({
 });
 
 directory.views.measurePage = Backbone.View.extend({
-    el: "#measureForm",
     events : {
         "change input" :"changed",
         "change select" :"changed"
@@ -213,7 +218,9 @@ directory.views.measurePage = Backbone.View.extend({
        this.model.set(obj);
     },
     render: function(eventName) {
-        $(this.el).html(this.template(this.model.toJSON()));
+        var js = this.model.toJSON();
+        var tpl = this.template(js);
+        $(this.el).html(tpl);
         return this;
     }
 
@@ -227,7 +234,7 @@ directory.Router = Backbone.Router.extend({
         "": "list",
         "list": "list",
         "measures/:id": "measureDetails",
-        "measures/:id/reports": "directReports"
+        "measures/:id/options": "options"
     },
 
     initialize: function() {
@@ -293,10 +300,10 @@ directory.Router = Backbone.Router.extend({
         });
     },
 
-    directReports: function(id) {
+    options: function(id) {
         var measure = new directory.models.measure({id: parseInt(id)});
-        measure.reports.fetch();
-        this.slidePage(new directory.views.DirectReportPage({model: measure.reports}).render());
+        measure.options.fetch();
+        this.slidePage(new directory.views.OptionsPage({model: measure.options}).render());
     },
 
     slidePage: function(page) {
@@ -351,7 +358,7 @@ directory.Router = Backbone.Router.extend({
 
 // Bootstrap the application
 directory.utils.store.populate();
-directory.utils.templateLoader.load(['search-page', 'report-page', 'measure-page', 'measure-list-item'],
+directory.utils.templateLoader.load(['search-page', 'option-page', 'measure-page', 'measure-list-item'],
     function() {
         directory.app = new directory.Router();
         Backbone.history.start();
