@@ -5,13 +5,17 @@ html{
 }
 body{
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-size: 12px;
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	background-color: #fff;
 	overflow: hidden;
 	position: relative;
+}
+
+div.withmargin {
+	margin: 10px;
 }
 
 .header{
@@ -192,10 +196,9 @@ body{
 
 .tableview{
 	margin: 0;
+	margin-top: 5px;
 	padding: 0;
 	list-style: none;
-	background-color: #fff;
-	border-bottom: 1px solid #e0e0e0;
 }
 .tableview li{
 	display: block;
@@ -209,12 +212,15 @@ body{
 	display: -moz-box;
 	display: box;
 	width: 100%;
+	background-color: #fff;
+	height: 32px;
 }
 
 .tableview-links li>a{
-	font-size: 15px;
-	line-height: 1.3em;
+	font-size: 13px;
+	line-height: 1.5em;
 	color: #000;
+	font-weight: bold;
 	display: block;
 	padding: 5px;
 	text-decoration: none;
@@ -248,15 +254,21 @@ body{
 	pointer-events: none;
 }
 
+.tableview li:only-child a{
+    border-radius:6px 6px 6px 6px;
+}
+
 .tableview-links li>a .metadata{
 	display: block;
 	font-size: 13px;
 	color: #666d74;
 	line-height: 1.2em;
 }
+
 .tableview-links li>a.pad-right{
 	padding-right: 44px;
 }
+
 .tableview-links li>a.more-link{
 	cursor: pointer;
 	-webkit-touch-callout: none;
@@ -273,9 +285,11 @@ body{
 	background-color: #4286f5;
 	background-repeat: repeat-x;
 }
+
 .tableview-links li>a.tappable-active *{
 	color: #fff;
 }
+
 .tableview-links li>a.detail-disclosure{
 	-webkit-touch-callout: none;
 	padding: 0;
@@ -291,9 +305,11 @@ body{
 	-moz-box-flex: 0;
 	box-flex: 0;
 }
+
 .tableview-links li>a.detail-disclosure.tappable-active{
 	background: transparent none;
 }
+
 .tableview-links li>a.detail-disclosure span{
 	display: inline-block;
 	width: 29px;
@@ -305,9 +321,35 @@ body{
 	-o-background-size: 58px 31px;
 	background-size: 58px 31px;
 }
+
 .tableview-links li>a.detail-disclosure.tappable-active span {
 	background-position: top right;
 }
+
+.tableview li:first-child {
+    border-top:1px solid #AAA;
+    border-radius:6px 6px 0px 0px;
+}
+
+.tableview li:last-child {
+    border-bottom:none;
+    border-radius:0px 0px 6px 6px;
+}
+
+.tableview li:first-child a{
+    border-radius:6px 6px 0px 0px;
+}
+
+.tableview li:last-child a{
+    border-radius:0px 0px 6px 6px;
+}
+
+.tableview li:only-child {
+	paddng:5px 0 5px 0;
+    border-bottom:none;
+    border-radius:6px 6px 6px 6px;
+}
+
 
 .link-text{
 	color: #385487;
@@ -401,7 +443,7 @@ body{
 	background-repeat: repeat-x;
 	background-position: bottom;
 
-    height: 50px;
+    height: 40px;
 }
 
 .measure-summary img {
@@ -410,7 +452,7 @@ body{
 }
 
 .detail-section {
-	padding: 15px 0px 10px;
+	padding: 15px 0px 2px;
 }
 
 .measure-details {
@@ -426,3 +468,17 @@ body{
     right: 10px;
 	width: 28px;
 }
+
+input {
+	border: none;
+	height: 30px;
+	margin-left: 5px;
+	font-weight: bold;
+	display:table-cell;
+	width: 100%;
+}
+
+input:focus {
+	border: none;
+}
+

@@ -12,16 +12,25 @@
 <div class="scroll striped" style="top:44px;">
     <div class="measure-summary">
         <header>
-            <h1><%= measureType.name %> <%= dataType.description %></h1>
-            <span class="link-text"><%= measureName %></span><br/>
+            <span class="link-text"><%= measureName %></span> (<%= measureType.name %>, <%= dataType.description %>)<br/>
         </header>
     </div>
 
     <div class="measure-details" >
+        <div class="detail-section"><b>Name</b></div>
+        <ul class="tableview tableview-links">
+            <li>
+                <div style="display:table; width: 95%">
+                <input value="<%= measureName %>"  />
+                </div>
+            </li>
+        </ul>   
+
+
         <div class="detail-section"><b>Measure Type</b></div>
         <ul class="tableview tableview-links">
             <li>
-                <a href="#" data=val="<%=MeasureTypes.INPUT.value %>"><%=MeasureTypes.INPUT.name %></a>
+                <a href="" data=val="<%=MeasureTypes.INPUT.value %>"><%=MeasureTypes.INPUT.name %></a>
             </li>
             <li>
                 <a href="#" data=val="<%=MeasureTypes.OUTPUT.value %>"><%=MeasureTypes.OUTPUT.name %></a> 
@@ -37,15 +46,15 @@
                 <a value="<%=DataTypes.INTEGER.value %>"><%=DataTypes.INTEGER.description %></a>
             </li>
             <li>
-                <a value="<%=DataTypes.DECIMAL.value %>"><%=DataTypes.DECIMAL.description %></a>
+                <a href="" value="<%=DataTypes.DECIMAL.value %>"><%=DataTypes.DECIMAL.description %></a>
             </li>
             <li>
                 <a value="<%=DataTypes.ORDINAL.value %>"><%=DataTypes.ORDINAL.description %></a>
-                <a href="#ordinalValues/<%= id %>" class="detail-disclosure"><span></span></a>
+                <a href="#measures/<%= id %>/ordinaloptions" class="detail-disclosure"><span></span></a>
             </li>
             <li>
                 <a value="<%=DataTypes.DISCRETE.value %>"><%=DataTypes.DISCRETE.description %></a>
-                <a href="#discreteValues/<%= id %>" class="detail-disclosure"><span></span></a>
+                <a href="#measures/<%= id %>/codedoptions" class="detail-disclosure"><span></span></a>
             </li>
         </ul>
 
@@ -55,4 +64,12 @@
             </a>
         </div>
     </div>
+</div>
+
+<div class="ordinaloptions"> Ordinal Options
+</div>
+
+
+<div class="codedoptions">
+    Coded Options
 </div>

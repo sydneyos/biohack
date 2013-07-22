@@ -54,15 +54,15 @@ directory.utils.store = {
     measures: {},
 
     populate: function() {
-        this.measures[1] = {id: 1, measureType: MeasureTypes.INPUT, dataType: DataTypes.ORDINAL, measureName: 'Chocolate', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[2] = {id: 2, measureType: MeasureTypes.INPUT, dataType: DataTypes.ORDINAL, measureName: 'Citrus', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[3] = {id: 3, measureType: MeasureTypes.INPUT, dataType: DataTypes.DECIMAL, measureName: 'Calories', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[4] = {id: 4, measureType: MeasureTypes.INPUT, dataType: DataTypes.INTEGER, measureName: 'Cups of Coffee', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[5] = {id: 5, measureType: MeasureTypes.INPUT, dataType: DataTypes.DECIMAL, measureName: 'Hours of Sleep', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[6] = {id: 6, measureType: MeasureTypes.INPUT, dataType: DataTypes.INTEGER, measureName: 'Carb grams', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[7] = {id: 7, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.ORDINAL, measureName: 'Headache', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[8] = {id: 8, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.DECIMAL, measureName: 'Weight', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
-        this.measures[9] = {id: 9, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.ORDINAL, measureName: 'Fatigue', createdAt: new Date(5,1,2013, 10, 0, 15, 0)};
+        this.measures[1] = {id: 1, measureType: MeasureTypes.INPUT, dataType: DataTypes.ORDINAL, measureName: 'Chocolate', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[2] = {id: 2, measureType: MeasureTypes.INPUT, dataType: DataTypes.ORDINAL, measureName: 'Citrus', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[3] = {id: 3, measureType: MeasureTypes.INPUT, dataType: DataTypes.DECIMAL, measureName: 'Calories', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[4] = {id: 4, measureType: MeasureTypes.INPUT, dataType: DataTypes.INTEGER, measureName: 'Cups of Coffee', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[5] = {id: 5, measureType: MeasureTypes.INPUT, dataType: DataTypes.DECIMAL, measureName: 'Hours of Sleep', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[6] = {id: 6, measureType: MeasureTypes.INPUT, dataType: DataTypes.INTEGER, measureName: 'Carb grams', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[7] = {id: 7, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.ORDINAL, measureName: 'Headache', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[8] = {id: 8, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.DECIMAL, measureName: 'Weight', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
+        this.measures[9] = {id: 9, measureType: MeasureTypes.OUTPUT, dataType: DataTypes.ORDINAL, measureName: 'Fatigue', createdAt: new Date(5,1,2013, 10, 0, 15, 0), codes: {}};
     },
 
     findById: function(id) {
@@ -120,10 +120,9 @@ Backbone.sync = function(method, model, options) {
 // The measure Model
 directory.models.measure = Backbone.Model.extend({
     initialize: function() {
-        // this.options = new directory.models.measureCollection();
-        // this.options.managerId = this.id;
+        this.codes = new directory.models.codeCollection();
+        this.codes.parentId = this.id;
     }
-
 });
 
 // The measureCollection Model
@@ -141,6 +140,20 @@ directory.models.measureCollection = Backbone.Collection.extend({
         this.reset(this.store.findByType(key));
     }
 
+});
+
+directory.models.code = Backbone.Model.extend({
+    initialize: function() {
+
+    }
+});
+
+directory.models.codeCollection = Backbone.Collection.extend({
+    model: directory.models.code,
+
+    find: function() {
+        this.reset(this);
+    }
 });
 
 
@@ -223,9 +236,48 @@ directory.views.measurePage = Backbone.View.extend({
         $(this.el).html(tpl);
         return this;
     }
-
 });
 
+directory.views.ordinalOptionsPage = Backbone.View.extend({
+    events : {
+        "change input" :"changed",
+        "change select" :"changed"
+    },
+    initialize: function () {
+        this.template = _.template(directory.utils.templateLoader.get('ordinal-options-page'));
+        _.bindAll(this, "changed");
+    },
+    changed: function(evt) {
+
+    },
+    render: function(eventName) {
+        var js = this.model.toJSON();
+        var tpl = this.template(js);
+        $(this.el).html(tpl);
+        return this;
+    }
+});
+
+
+directory.views.codedOptionsPage = Backbone.View.extend({
+    events : {
+        "change input" :"changed",
+        "change select" :"changed"
+    },
+    initialize: function () {
+        this.template = _.template(directory.utils.templateLoader.get('coded-options-page'));
+        _.bindAll(this, "changed");
+    },
+    changed: function(evt) {
+
+    },
+    render: function(eventName) {
+        var js = this.model.toJSON();
+        var tpl = this.template(js);
+        $(this.el).html(tpl);
+        return this;
+    }
+});
 // ----------------------------------------------- The Application Router ------------------------------------------ //
 
 directory.Router = Backbone.Router.extend({
@@ -234,7 +286,8 @@ directory.Router = Backbone.Router.extend({
         "": "list",
         "list": "list",
         "measures/:id": "measureDetails",
-        "measures/:id/options": "options"
+        "measures/:id/ordinaloptions": "ordinalOptions",
+        "measures/:id/codedoptions": "codedOptions"
     },
 
     initialize: function() {
@@ -300,10 +353,24 @@ directory.Router = Backbone.Router.extend({
         });
     },
 
-    options: function(id) {
-        var measure = new directory.models.measure({id: parseInt(id)});
-        measure.options.fetch();
-        this.slidePage(new directory.views.OptionsPage({model: measure.options}).render());
+    ordinalOptions: function(id) {
+        var measure = new directory.models.measure({id: parseInt(id)}),
+        self = this;
+        measure.fetch({
+            success: function(data) {
+                self.slidePage(new directory.views.ordinalOptionsPage({model: data.codes}).render());
+            }
+        });
+    },
+
+    codedOptions: function(id) {
+        var measure = new directory.models.measure({id: parseInt(id)}),
+        self = this;
+        measure.fetch({
+            success: function(data) {
+                self.slidePage(new directory.views.codedOptionsPage({model: data.codes}).render());
+            }
+        });
     },
 
     slidePage: function(page) {
@@ -358,7 +425,7 @@ directory.Router = Backbone.Router.extend({
 
 // Bootstrap the application
 directory.utils.store.populate();
-directory.utils.templateLoader.load(['search-page', 'option-page', 'measure-page', 'measure-list-item'],
+directory.utils.templateLoader.load(['search-page', 'ordinal-options-page', 'coded-options-page', 'measure-page', 'measure-list-item'],
     function() {
         directory.app = new directory.Router();
         Backbone.history.start();
