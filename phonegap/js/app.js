@@ -4,7 +4,16 @@
 // Creating the application namespace
 var MeasureTypes = Object.freeze({
     INPUT: { value: 1, name: 'Cause', pluralName: 'Causes' },
-    OUTPUT: { value: 2, name: 'Effect', pluralName: 'Effects' }
+    OUTPUT: { value: 2, name: 'Effect', pluralName: 'Effects' },
+    get: function(val) {
+        if (val == 1) {
+            return MeasureTypes.INPUT;
+        }
+        if (val == 2) {
+            return MeasureTypes.OUTPUT;
+        }
+    }
+
     });
 var DataTypes = Object.freeze(
     { 
@@ -217,7 +226,8 @@ directory.views.measureListItemView = Backbone.View.extend({
 directory.views.measurePage = Backbone.View.extend({
     events : {
         "change input" :"changed",
-        "change select" :"changed"
+        "click a.data-type" :"selectDataType",
+        "click a.measure-type": "selectMeasureType"
     },
     initialize: function () {
         this.template = _.template(directory.utils.templateLoader.get('measure-page'));
@@ -235,6 +245,28 @@ directory.views.measurePage = Backbone.View.extend({
         var tpl = this.template(js);
         $(this.el).html(tpl);
         return this;
+    },
+    dataTypeClass: function(dataType) {
+        if (this.model.dataType == dataType)
+            return "selected";
+        return "";
+    },
+    measureTypeClass: function(measureType) {
+        if (this.model.measureType == measureType)
+            return "selected";
+        return "";
+    },
+    selectDataType: function(evt) {
+        $(".data-type").removeClass('selected');
+        var selected = evt.currentTarget;
+        var dataType = $(selected).addClass("selected").attr('data-val');
+        this.model.dataType = DataTypes.get(dataType);
+    },
+    selectMeasureType: function(evt) {
+        $(".measure-type").removeClass('selected');
+        var selected = evt.currentTarget;
+        var measureType = $(selected).addClass("selected").attr('data-val');
+        this.model.measureType = MeasureTypes.get(measureType);
     }
 });
 

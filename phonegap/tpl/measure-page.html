@@ -28,32 +28,32 @@
 
 
         <div class="detail-section"><b>Measure Type</b></div>
-        <ul class="tableview tableview-links">
-            <li>
-                <a href="" data=val="<%=MeasureTypes.INPUT.value %>"><%=MeasureTypes.INPUT.name %></a>
+        <ul class="tableview tableview-links data-types">
+            <li class="<%=this.measureTypeClass(MeasureTypes.INPUT) %>">
+                <a class="measure-type" data-val="<%=MeasureTypes.INPUT.value %>"><%=MeasureTypes.INPUT.name %></a>
             </li>
-            <li>
-                <a href="#" data=val="<%=MeasureTypes.OUTPUT.value %>"><%=MeasureTypes.OUTPUT.name %></a> 
+            <li class="<%=this.measureTypeClass(MeasureTypes.OUTPUT) %>">
+                <a class="measure-type" data-val="<%=MeasureTypes.OUTPUT.value %>"><%=MeasureTypes.OUTPUT.name %></a> 
             </li>
         </ul>
         
         <div class="detail-section"><b>Data Type</b></div>
         <ul class="tableview tableview-links">
             <li>
-                <a value="<%=DataTypes.BOOL.value %>"><%=DataTypes.BOOL.description %></a>
+                <a href="#" class="data-type" data-val="<%=DataTypes.BOOL.value %>"><%=DataTypes.BOOL.description %></a>
             </li>
             <li>
-                <a value="<%=DataTypes.INTEGER.value %>"><%=DataTypes.INTEGER.description %></a>
+                <a href="#" class="data-type" data-val="<%=DataTypes.INTEGER.value %>"><%=DataTypes.INTEGER.description %></a>
             </li>
             <li>
-                <a href="" value="<%=DataTypes.DECIMAL.value %>"><%=DataTypes.DECIMAL.description %></a>
+                <a href="#" class="data-type" data-val="<%=DataTypes.DECIMAL.value %>"><%=DataTypes.DECIMAL.description %></a>
             </li>
             <li>
-                <a value="<%=DataTypes.ORDINAL.value %>"><%=DataTypes.ORDINAL.description %></a>
+                <a href="#" class="data-type" data-val="<%=DataTypes.ORDINAL.value %>"><%=DataTypes.ORDINAL.description %></a>
                 <a href="#measures/<%= id %>/ordinaloptions" class="detail-disclosure"><span></span></a>
             </li>
             <li>
-                <a value="<%=DataTypes.DISCRETE.value %>"><%=DataTypes.DISCRETE.description %></a>
+                <a href="#" class="data-type" data-val="<%=DataTypes.DISCRETE.value %>"><%=DataTypes.DISCRETE.description %></a>
                 <a href="#measures/<%= id %>/codedoptions" class="detail-disclosure"><span></span></a>
             </li>
         </ul>

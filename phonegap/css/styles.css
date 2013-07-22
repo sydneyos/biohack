@@ -216,6 +216,10 @@ div.withmargin {
 	height: 32px;
 }
 
+.tableview-links li>a.selected {
+	background: transparent url(images/checkx.png);
+}
+
 .tableview-links li>a{
 	font-size: 13px;
 	line-height: 1.5em;
