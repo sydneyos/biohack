@@ -105,6 +105,10 @@ div.withmargin {
 	left: 0;
 }
 
+.button-add {
+	padding: 13px 10px;
+}
+
 .button-right{
 	right: 0;
 }
@@ -216,9 +220,6 @@ div.withmargin {
 	height: 32px;
 }
 
-.tableview-links li>a.selected {
-	background: transparent url(images/checkx.png);
-}
 
 .tableview-links li>a{
 	font-size: 13px;
@@ -252,6 +253,7 @@ div.withmargin {
 	-ms-background-size: 10px 100%;
 	-o-background-size: 10px 100%;
 	background-size: 10px 100%;
+	margin-left: 10px;
 }
 
 .tableview-links li>a *{
@@ -328,6 +330,16 @@ div.withmargin {
 
 .tableview-links li>a.detail-disclosure.tappable-active span {
 	background-position: top right;
+}
+
+.tableview-links li>a.selected {
+	background: transparent url(images/checkx.png);
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.tableview-links li>a .selectable-link-text {
+	margin-left: 20px;
 }
 
 .tableview li:first-child {
